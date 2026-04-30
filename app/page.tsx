@@ -354,14 +354,19 @@ className="hero-photo-wrap"      >
       </motion.div>
 
       <style>{`
-        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-        @media(max-width:768px){
-          section { flex-direction: column !important; padding-top: 7rem !important; text-align: center; }
-          .hero-photo-wrap { width: 240px !important; height: 240px !important; }
-          .hero-photo-wrap > div:nth-child(2) { width: 240px !important; height: 240px !important; }
-          .hidden-mobile { display: none !important; }
-        }
-      `}</style>
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+  @media(max-width:768px){
+    section { flex-direction: column !important; padding-top: 7rem !important; padding-left: 1.5rem !important; padding-right: 1.5rem !important; text-align: center; align-items: center !important; }
+    .hero-photo-wrap { width: 220px !important; height: 220px !important; margin: 0 auto !important; }
+    .hero-photo-wrap > div:nth-child(2) { width: 220px !important; height: 220px !important; }
+    .hidden-mobile { display: none !important; }
+    h1 { text-align: center !important; }
+    p { text-align: center !important; }
+    div[style*="display: flex"] { justify-content: center !important; }
+  }
+  * { box-sizing: border-box; }
+  body { overflow-x: hidden !important; }
+`}</style>
     </section>
   );
 }
@@ -707,7 +712,7 @@ function Footer() {
       color: '#333', fontSize: '0.8rem',
       position: 'relative', zIndex: 1,
     }}>
-      Designed & Built by <span style={{ color: '#00f5d4' }}>Mohammad Aghbar</span> · 2025
+      Designed & Built by <span style={{ color: '#00f5d4' }}>Mohammad Aghbar</span> · 2026
     </footer>
   );
 }
@@ -715,7 +720,7 @@ function Footer() {
 // ── Main export ───────────────────────────────────────────────────────────────
 export default function Home() {
   return (
-    <main style={{ background: '#080808', minHeight: '100vh' }}>
+    <main style={{ background: '#080808', minHeight: '100vh', overflowX: 'hidden' }}>
       <Particles />
       <Navbar />
       <Hero />
