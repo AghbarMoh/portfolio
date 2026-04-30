@@ -154,7 +154,7 @@ function Hero() {
       }}
     >
       {/* Left: text */}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1 }} className="hero-text">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -355,19 +355,28 @@ className="hero-photo-wrap mobile-photo"      >
         </motion.div>
       </motion.div>
 
-      <style>{`
+     <style>{`
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-  @media(max-width:768px){
-    section#about { flex-direction: column !important; padding-top: 7rem !important; padding-left: 1.5rem !important; padding-right: 1.5rem !important; text-align: center; align-items: center !important; }
-    .mobile-photo { width: 140px !important; height: 140px !important; padding: 10px !important; margin: 0 auto !important; order: 2 !important; }
-    .mobile-photo > div:nth-child(2) { width: 120px !important; height: 120px !important; }
-    .mobile-photo > div:nth-child(1) { inset: -4px !important; }
-    .mobile-badge { display: none !important; }
-    .hidden-mobile { display: none !important; }
-    div[style*="display: flex"] { justify-content: center !important; }
-  }
   * { box-sizing: border-box; }
   body { overflow-x: hidden !important; }
+  @media(max-width:768px){
+    section#about {
+      flex-direction: column !important;
+      padding-top: 7rem !important;
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+    .hero-text { order: 2 !important; width: 100% !important; }
+    .mobile-photo { order: 1 !important; width: 220px !important; height: 220px !important; padding: 16px !important; margin: 0 auto 2rem auto !important; }
+    .mobile-photo > div:nth-child(2) { width: 188px !important; height: 188px !important; }
+    .mobile-badge { display: none !important; }
+    .hidden-mobile { display: none !important; }
+    h1 { text-align: center !important; }
+    div[style*="gap: 2.5rem"] { justify-content: center !important; }
+    div[style*="gap: 1rem"] { justify-content: center !important; }
+  }
 `}</style>
     </section>
   );
