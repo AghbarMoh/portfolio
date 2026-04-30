@@ -154,7 +154,7 @@ function Hero() {
       }}
     >
       {/* Left: text */}
-      <div style={{ flex: 1, order: 2 }}>
+      <div style={{ flex: 1 }}>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -279,7 +279,7 @@ function Hero() {
         initial={{ opacity: 0, scale: 0.8, x: 60 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.9, ease: 'easeOut' }}
-style={{ position: 'relative', flexShrink: 0, padding: '40px', order: 1 }}
+style={{ position: 'relative', flexShrink: 0, padding: '40px' }}
 className="hero-photo-wrap mobile-photo"      >
         {/* Glow ring */}
         <motion.div
@@ -358,9 +358,9 @@ className="hero-photo-wrap mobile-photo"      >
       <style>{`
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
   @media(max-width:768px){
-    section { flex-direction: column !important; padding-top: 7rem !important; padding-left: 1.5rem !important; padding-right: 1.5rem !important; text-align: center; align-items: center !important; }
-    .mobile-photo { width: 120px !important; height: 120px !important; padding: 8px !important; margin: 0 auto !important; }
-    .mobile-photo > div:nth-child(2) { width: 100px !important; height: 100px !important; }
+    section#about { flex-direction: column !important; padding-top: 7rem !important; padding-left: 1.5rem !important; padding-right: 1.5rem !important; text-align: center; align-items: center !important; }
+    .mobile-photo { width: 140px !important; height: 140px !important; padding: 10px !important; margin: 0 auto !important; order: 2 !important; }
+    .mobile-photo > div:nth-child(2) { width: 120px !important; height: 120px !important; }
     .mobile-photo > div:nth-child(1) { inset: -4px !important; }
     .mobile-badge { display: none !important; }
     .hidden-mobile { display: none !important; }
