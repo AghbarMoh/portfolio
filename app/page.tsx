@@ -154,7 +154,7 @@ function Hero() {
       }}
     >
       {/* Left: text */}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, order: 2 }}>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -279,7 +279,7 @@ function Hero() {
         initial={{ opacity: 0, scale: 0.8, x: 60 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.9, ease: 'easeOut' }}
-style={{ position: 'relative', flexShrink: 0, padding: '40px' }}
+style={{ position: 'relative', flexShrink: 0, padding: '40px', order: 1 }}
 className="hero-photo-wrap"      >
         {/* Glow ring */}
         <motion.div
