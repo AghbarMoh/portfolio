@@ -280,7 +280,7 @@ function Hero() {
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.9, ease: 'easeOut' }}
 style={{ position: 'relative', flexShrink: 0, padding: '40px', order: 1 }}
-className="hero-photo-wrap"      >
+className="hero-photo-wrap mobile-photo"      >
         {/* Glow ring */}
         <motion.div
           animate={{ rotate: 360 }}
@@ -314,6 +314,7 @@ className="hero-photo-wrap"      >
         <motion.div
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          className="mobile-badge"
           style={{
             position: 'absolute',
             bottom: '10px',
@@ -334,6 +335,7 @@ className="hero-photo-wrap"      >
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+          className="mobile-badge"
           style={{
             position: 'absolute',
             top: '20px',
@@ -357,11 +359,11 @@ className="hero-photo-wrap"      >
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
   @media(max-width:768px){
     section { flex-direction: column !important; padding-top: 7rem !important; padding-left: 1.5rem !important; padding-right: 1.5rem !important; text-align: center; align-items: center !important; }
-    .hero-photo-wrap { width: 220px !important; height: 220px !important; margin: 0 auto !important; }
-    .hero-photo-wrap > div:nth-child(2) { width: 220px !important; height: 220px !important; }
+    .mobile-photo { width: 120px !important; height: 120px !important; padding: 8px !important; margin: 0 auto !important; }
+    .mobile-photo > div:nth-child(2) { width: 100px !important; height: 100px !important; }
+    .mobile-photo > div:nth-child(1) { inset: -4px !important; }
+    .mobile-badge { display: none !important; }
     .hidden-mobile { display: none !important; }
-    h1 { text-align: center !important; }
-    p { text-align: center !important; }
     div[style*="display: flex"] { justify-content: center !important; }
   }
   * { box-sizing: border-box; }
