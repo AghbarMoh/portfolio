@@ -492,7 +492,7 @@ function Projects() {
         <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 900, letterSpacing: '-1px', marginBottom: '3rem' }}>Projects</h2>
       </motion.div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(480px, 1fr))', gap: '2rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(480px, 100%), 1fr))', gap: '2rem' }}>
         {projects.map((p, i) => (
           <motion.div
             key={p.title}
