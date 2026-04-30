@@ -176,18 +176,7 @@ function Hero() {
             marginBottom: '0.5rem',
           }}
         >
-          <span className="name-photo-row">
-            <span className="inline-photo">
-              <Image
-                src="/profile.jpg"
-                alt="Mohammad Aghbar"
-                width={64}
-                height={64}
-                style={{ borderRadius: '50%', objectFit: 'cover', objectPosition: 'top', border: '2px solid #00f5d4' }}
-              />
-            </span>
-            Mohammad
-          </span>
+          Mohammad
           <br />
           <span style={{
             background: 'linear-gradient(135deg, #00f5d4, #7b61ff)',
@@ -370,8 +359,6 @@ className="hero-photo-wrap mobile-photo"      >
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
   * { box-sizing: border-box; }
   body { overflow-x: hidden !important; }
-  .inline-photo { display: none; }
-  .name-photo-row { display: inline; }
   @media(max-width:768px){
     section#about {
       flex-direction: column !important;
@@ -381,15 +368,9 @@ className="hero-photo-wrap mobile-photo"      >
       align-items: center !important;
       text-align: center !important;
     }
-    .hero-text { order: 1 !important; width: 100% !important; }
-    .mobile-photo { display: none !important; }
-    .inline-photo { 
-      display: inline-flex !important; 
-      vertical-align: middle !important; 
-      margin-right: 0.4rem !important;
-      margin-bottom: 0.3rem !important;
-    }
-    .name-photo-row { display: flex !important; align-items: center !important; justify-content: center !important; }
+    .hero-text { order: 2 !important; width: 100% !important; }
+    .mobile-photo { order: 1 !important; width: 220px !important; height: 220px !important; padding: 16px !important; margin: 0 auto 2rem auto !important; }
+    .mobile-photo > div:nth-child(2) { width: 188px !important; height: 188px !important; }
     .mobile-badge { display: none !important; }
     .hidden-mobile { display: none !important; }
     h1 { text-align: center !important; }
