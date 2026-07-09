@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import IntroTransition from './components/IntroTransition';
 
 // ── Floating particles background ──────────────────────────────────────────
 function Particles() {
@@ -732,6 +733,7 @@ function Footer() {
 export default function Home() {
   return (
     <main style={{ background: '#080808', minHeight: '100vh', overflowX: 'hidden' }}>
+      <IntroTransition />
       <Particles />
       <Navbar />
       <Hero />
